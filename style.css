@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+:root {
+	--font-family-2: "Dancing Script", san-serif;
+	--font-family-4: "Courgette", san-serif;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+html {
+	font-family: var(--font-family-4);
+	font-size: 12px;
+	font-weight: 600;
+}
+section {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 100px 0 200px;
+	background-color: rgb(16, 58, 78);
+}
+.container {
+	width: 90%;
+	height: auto;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.brand {
+	text-align: center;
+	font-size: 4.5rem;
+	color: whitesmoke;
+	margin-bottom: 10px;
+	font-family: var(--font-family-2);
+}
+form {
+	width: 90%;
+	max-width: 400px;
+	margin: 20px auto;
+	display: flex;
+	border-radius: 5px;
+	background-color: whitesmoke;
+	color: rgb(16, 58, 78);
+}
+form input {
+	width: 100%;
+	background-color: transparent;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 10px;
+	font-size: 1.5rem;
+	display: inline-block;
+}
+form ion-icon {
+	width: 9%;
+	display: inline-block;
+	font-size: 3rem;
+	margin: 5px;
+	color: rgb(75, 75, 75);
+}
+.search-result {
+	width: 100%;
+	margin-top: 50px;
+	display: grid;
+	grid-gap: 25px;
+	grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+.item {
+	width: 100%;
+	border-radius: 5px;
+	background-color: rgba(67, 83, 94, 0.9);
+	padding: 15px;
+	overflow: hidden;
+	transition: 0.3s ease-out;
+}
+.item:hover {
+	transform: translateY(-5px);
+}
+.item img {
+	width: 100%;
+	height: 300px;
+	border-radius: 5px;
+}
+.item .flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.item .title {
+	padding: 20px 10px 0 0;
+	color: whitesmoke;
+	font-weight: 400;
+	font-size: 2rem;
+}
+.view-button {
+	text-decoration: none;
+	width: 130px;
+	text-align: center;
+	padding: 10px 0;
+	background-color: rgb(108, 122, 134);
+	font-size: 1.4rem;
+	color: whitesmoke;
+	margin-top: 20px;
+	align-self: flex-start;
+}
+.item-data {
+	color: whitesmoke;
+	display: block;
+	font-size: 1.2rem;
+	margin-top: 10px;
+	letter-spacing: 0.1rem;
+	line-height: 2rem;
+}
+body {
+	position: relative;
+}
+.d-none {
+	display: none;
+}
+.author {
+	color: whitesmoke;
+	font-size: 20px;
+	position: absolute;
+	bottom: 4rem;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.initial .brand {
+	font-size: 7rem;
+}
+.initial form {
+	max-width: 800px;
+}
+.initial form input {
+	padding: 20px;
+	font-size: 3rem;
+}
+.initial form ion-icon {
+	padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+	.search-result {
+		grid-gap: 10px;
+	}
+	.initial .brand {
+		font-size: 4rem;
+	}
+	.initial form {
+		max-width: 500px;
+	}
+	.initial form input {
+		padding: 5px;
+		font-size: 1.5rem;
+	}
+	.initial form ion-icon {
+		padding: 5px;
+		font-size: 2rem;
+	}
+}
